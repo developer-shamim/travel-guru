@@ -1,0 +1,39 @@
+.site-area{
+    display: flex;
+}
+.site-heading{
+    width: 478px;
+    height: 116px;
+    margin-left: 135px;
+    margin-top: 10px;
+    font-size: 68px;
+    line-height: 117px;
+    color: rgb(47, 22, 189);
+
+}
+.site-text{
+    width: 455px;
+    height: 90px;
+    margin-left: 135px;
+    margin-top: 5px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFF;
+}
+.btn-booking{
+    width: 160px;
+    height: 48px;
+    margin-left: 135px;
+    margin-top: 80px;
+    background: #F9A51A;
+    border-radius:5px;
+    border-color: none;
+
+}
+
+.btn-danger{
+    width: 160px;
+    height: 48px;
+    margin-left: 135px;
+    margin-top: 20px;
+}

@@ -1,0 +1,25 @@
+.home-area{
+    display: flex;
+}
+
+.destination-area{
+    display: flex;
+    width: 680px;
+    height: 440px;
+    margin-left: 80px;
+    margin-top: 50px;
+    box-sizing: border-box;
+   
+}
+
+
+.places{
+    display: flex;
+    width: 680px;
+    height: 440px;
+    margin-left: 80px;
+    margin-top: 50px;
+    box-sizing: border-box;
+   
+}
+

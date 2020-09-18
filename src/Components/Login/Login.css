@@ -1,0 +1,44 @@
+.login-area{
+    position:absolute;
+    align-items:center;
+    text-align: center;
+    padding: 30px;
+    width: 570px;
+    height: 480px;
+    margin-left: 438px;
+    margin-top: 50px;
+    background: #FFFFFF;
+    border: 1px solid #ababab;
+    border-radius: 5px;
+    BOX-sizing: border-box;
+    padding: 20px;
+}
+
+.account-area{
+    position:absolute;
+    align-items:center;
+    text-align: center;
+    padding: 30px;
+    width: 570px;
+    height: 530px;
+    margin-left: 438px;
+    margin-top: 50px;
+    background: #FFFFFF;
+    border: 1px solid #ababab;
+    border-radius: 5px;
+    BOX-sizing: border-box;
+    padding: 20px;
+}
+
+.btn-log{
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: goldenrod;
+}
+
+.btn-social{
+    background-color: transparent;
+    border-radius: 20px;
+    width: 250px;
+}
