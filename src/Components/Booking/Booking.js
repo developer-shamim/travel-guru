@@ -8,9 +8,8 @@ import {
   MuiPickersUtilsProvider,
   KeyboardDatePicker,
 } from '@material-ui/pickers';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Booking.css'
-import Destination from '../Destination/Destination';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -23,13 +22,8 @@ const useStyles = makeStyles((theme) => ({
 
 
 const Booking = () => {
-  const history = useHistory();
+  
 const [selectedDate, setSelectedDate] = React.useState(new Date('2014-08-18T21:11:54'));
-
-// const handleSubmit = () = {
-//   history.push("/hotels/{place})
-// }
-
 
   const handleDateChange = (date) => {
     setSelectedDate(date);

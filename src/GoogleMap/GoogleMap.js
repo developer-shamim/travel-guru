@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
+
 
 class GoogleMap extends Component {
     constructor(props) {
@@ -7,10 +7,7 @@ class GoogleMap extends Component {
         this.onScriptLoad = this.onScriptLoad.bind(this)
     }
 
-    onScriptLoad() {
-        const mapId = document.getElementById(this.props.id);
-        const map = new window.google.maps.Map(mapId, this.props.options);
-    }
+  
 
     componentDidMount() {
 
@@ -30,7 +27,7 @@ class GoogleMap extends Component {
         })
     }
 
-    render() {
+    render () {
         return (
             <div style={{  }} id={this.props.id} />
         );

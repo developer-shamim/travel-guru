@@ -2,7 +2,6 @@ import React, { useContext, useState  } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import hotelData from '../../FakeData/hotelData';
-import GoogleMap from '../../GoogleMap/GoogleMap';
 import './Hotels.css';
 import { UserContext } from '../../App';
 
@@ -11,7 +10,7 @@ import { UserContext } from '../../App';
 
 const Hotels = (props) => {
     const hotels = hotelData.slice (0,3)
-    const [hotel, setHotel] =useState (hotels);
+    const [hotel ] =useState (hotels);
     const [,,site] = useContext (UserContext)
     
     return (
@@ -39,11 +38,6 @@ const Hotels = (props) => {
             }
             </div>
                 <div className="map-area">
-                    <GoogleMap id="myMap"
-            options={{
-                center: { lat: 41.0082, lng: 28.9784 },
-                zoom: 8
-            }}></GoogleMap>
                 
                 </div>
         </div>            
