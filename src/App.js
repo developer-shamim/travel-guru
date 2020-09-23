@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createContext, useState } from 'react';
 import './App.css';
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
@@ -6,33 +6,44 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
 } from "react-router-dom";
 import NoMatch from './NoMatch/NoMatch';
-import Booking from './Components/Cards/Booking/Booking';
 import Login from './Components/Login/Login';
-import CreateAccount from './Components/Login/CreateAccount.js';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import Hotels from './Components/Hotels/Hotels';
+import Booking from './Components/Booking/Booking';
+
+export const UserContext = createContext();
 
 
 
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState({});
+  
+  const [site, setSite] = useState(" "); 
   return (
-    <div className="background">
-      <Header/>
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser, site, setSite]}> 
+   
+    <div>
       <Router>
+      <Header/>
         <Switch>
           <Route path="/home">
              <Home/>
           </Route>
+          
             <Route path="/booking">
               <Booking/>
             </Route>
+
             <Route path="/login">
               <Login/>
             </Route>
-            <Route path="/account">
-              <CreateAccount> </CreateAccount>
-            </Route>
+      
+            <PrivateRoute path="/hotels">
+              <Hotels/>
+            </PrivateRoute>
+            
           <Route exact path="/">
              <Home/>
           </Route>
@@ -41,13 +52,9 @@ function App() {
           </Route>
         </Switch>
       </Router>
-      
-      
-      
 
-      
-      
     </div>
+    </UserContext.Provider>
   );
 }
 
